@@ -2,24 +2,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap");
 
 :root {
-    --bgc: #49311c;
-    --textcolordark: #a2886b;
-    --textcolorlight: #d0c1bb;
-    --lightbgc: #d0c1bb;
+    --bgc: #fff;
+    --bgtrans: rgba(224,224, 224, 0.5);
+    --textcolordark: #012c3d;
+    --textcolorlight: #eee;
+    --textcoloralt: #f8444f;
+    --lightbgc: #f7f8f3;
     --greydark: #333333;
-    --sbgc: #736b6c;
+    --sbgc: #012c3d;
     --bgalt: #292a2f;
     --bgdark: #140d07;
-    --sidemarg: 24px;
+    --sidemarg: 2.7777777778vw;
     --sidemarhalf: 12px;
     --sidemargneg: -24px;
     --sidemarhalfneg: -12px;
     --borderlight: rgba(208, 193, 187, 0.3);
+    --letterspace: 1px;
+    --letterspacenorm: 0.2em;
+    --letterspacelong: 0.3em;
 }
 
 @media (max-width: 480px) {
     :root {
-        --sidemarg: 12px;
+        --sidemarg: 2.7777777778vw;
         --sidemarhalf: 6px;
         --sidemargneg: -12px;
         --sidemarhalfneg: -6px;
@@ -87,6 +92,18 @@
     opacity: 0.5;
 }
 
+body::-webkit-scrollbar {
+    width: 0.4em;
+    background-color: var(--textcolorlight);
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--bgalt);
+    border-radius: 9999px;
+
+}
+
 
 html,
 body {
@@ -100,7 +117,8 @@ body {
     font-family: "Poppins", sans-serif;
     height: auto;
     transition: all 0.5s;
-    color: #fff;
+    color: var(--textcolordark);
+    letter-spacing: normal;
 }
 
 a{
@@ -145,20 +163,20 @@ a{
     height: fit-content;
     width: 100%;
     margin: 0 !important;
-    padding: 8px 24px !important;
+    padding: 16px var(--sidemarg) !important;
     position: fixed !important;
     top: 0;
     left: 0;
     z-index: 1000;
-    backdrop-filter: blur(32px);
     display: inline-flex;
     flex-wrap: wrap;
-    color: #fff;
+    color: var(--textcolordark);
     align-items: center;
 }
 
 .navBar *{
     transition: none;
+    letter-spacing: var(--letterspacelong);
 }
 
 @media (max-width: 480px) {
@@ -171,7 +189,6 @@ a{
 
 .brand {
     width: fit-content;
-    text-transform: uppercase;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +197,8 @@ a{
 
 .brand h2{
     margin-bottom: 0;
-    font-weight: 600;
+    font-weight: 300;
+    font-size: 24px;
 }
 
 .brand h1{
@@ -239,38 +257,41 @@ a{
 }
 
 .RoundA {
-    border: 1px solid #fff;
+    border: 1px solid var(--textcolordark);
     border-radius: 9999px;
     padding: 0.25rem 0.75rem;
     backdrop-filter: blur(32px) !important;
     height: fit-content;
     width: fit-content;
     background: none;
-    color: #fff;
+    color: var(--textcolordark);
 }
 
 .RoundA:hover {
-    border: 1px dashed #fff;
-    color: #fff;
+    border: 1px dashed var(--textcolordark);
+    color: var(--textcolordark);
     cursor: pointer;
 }
 
 .RoundA a {
-    color: #fff;
+    color: var(--textcolordark);
     text-decoration: none;
     font-weight: 400;
 }
 
 .RoundA a:hover {
-    color: #fff;
+    color: var(--textcolordark);
     text-decoration: none;
     font-weight: 400;
 }
 
 .nav {
     display: inline-flex;
-    justify-content: flex-end;
-    padding: 4px 128px;
+    justify-content: space-around;
+    padding: 4px 4px !important;
+    background: var(--bgtrans);
+    border-radius: 9999px;
+    backdrop-filter: blur(16px);
 }
 
 .nav li {
@@ -279,26 +300,119 @@ a{
 }
 
 .nav li a {
-    padding: 4px 8px;
+    padding: 8px 16px;
     display: block;
     text-decoration: none;
-    color: #fff;
-    font-weight: 400;
+    color: var(--textcolordark);
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.menu{
+    padding: 0!important;
+    padding-right: 32px!important;
+}
+
+.menu a{
+    color: var(--textcolordark);
+    background: var(--bgc);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    height: 100%;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding-right: 0!important;
+    padding-left: 0!important;
+    
+}
+.header{
+    flex-direction: column;
+    background-image: url('../media/header.png');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: right top; 
 }
 
 .headerContent {
-    position: absolute;
-    top: 0;
     z-index: 1;
-    width: 90%;
+    width: 100%;
     height: 100%;
-    color: #fff !important;
+    color: var(--textcolordark) !important;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
 }
-.headerDescribe {
-    position: absolute;
-    bottom: 0;
-    max-width: 844px;
-    padding-bottom: 32px;
+
+.headI {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 64px;
+    align-items: center;
+}
+
+.am{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headI h2{
+    font-size: calc(7.5vw + 10px);
+    padding-left: 12px!important;
+    font-weight: 300!important;
+    letter-spacing: var(--letterspace);
+    line-height: 0.9;
+}
+
+.am h2{
+    font-size: calc(14.5vw + 10px)!important;
+    font-weight: 300!important;
+    padding: 0!important;
+}
+
+.secondName{
+    font-size: calc(7.5vw + 10px);
+}
+
+.redText{
+    color: var(--textcoloralt);
+}
+
+.headRight{
+    display: flex;
+    flex-grow: 100;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.headRight p{
+    letter-spacing: var(--letterspacelong)!important;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 200;
+}
+
+.headerTop {
+    padding-top: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.headerBottom {
+    padding-top: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerScroll{
+    padding: 32px;
+    border-radius: 50%;
+    background-color: var(--lightbgc);
 }
 
 .headerDescribe p {
@@ -310,18 +424,6 @@ a{
     padding: 8px 64px;
 }
 
-.plank::before {
-    content: "";
-    background-image: url('../media/bg.jpg');
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.1;
-    
-}
 
 .sectionContainer {
     width: 100%;
@@ -412,7 +514,7 @@ a{
 }
 
 .white {
-    color: #ffffff!important;
+    color: var(--textcolordark)fff!important;
 }
 
 .price {
@@ -435,7 +537,7 @@ a{
 }
 
 .sectionCol:nth-child(2){
-    background: #fff;
+    background: var(--textcolordark);
 }
 
 .sectionCol{
@@ -468,7 +570,7 @@ a{
 .bottomForm input{
     background: none;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--textcolordark);
     margin-bottom: 16px;
 }
 
