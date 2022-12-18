@@ -1,5 +1,209 @@
-<html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>My ecom</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+        />
+
+        <link href="./fontawesome/css/all.css" rel="stylesheet" />
+        <link href="" rel="stylesheet" />
+        <link href="" rel="stylesheet" />
+    </head>
     <body>
-        Hello World
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"
+        ></script>
+
+        <div class="navBar">
+            <div class="brand">
+                <div
+                    class="navToggle d-block d-md-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mobCollapse"
+                    aria-expanded="false"
+                    aria-controls="mobCollapse"
+                >
+                <i class="fa-solid fa-bars"></i>
+                </div>
+                <h2>Tasooq</h2>
+            </div>
+            <div class="navContainer d-md-flex d-none">
+                <ul class="nav">
+                    <li><a href="./products.html"> Products </a></li>
+                    <li><a href="#"> Floor Planks </a></li>
+                    <li><a href="#"> Furnitures </a></li>
+                    <li><a href="#"> Decorations </a></li>
+                </ul>
+                <div class="navRight">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="mRight roundA">
+                        <a>Register / Login</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navRight d-flex d-md-none">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+            <div class="navMobContainer collapse" id="mobCollapse">
+                <ul class="nav">
+                    <li><a href="./products.html"> Products </a></li>
+                    <li><a href="#"> Floor Planks </a></li>
+                    <li><a href="#"> Furnitures </a></li>
+                    <li><a href="#"> Decorations </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section header">
+            <div class="videoHeader">
+                <video
+                    id="headerVideo"
+                    src="./media/pexels-tony-schnagl-5527786.mp4"
+                    autoplay
+                    playsinline
+                    loop
+                    style="pointer-events: none"
+                    muted
+                ></video>
+            </div>
+            <div class="headerContent">
+                <div class="headerDescribe">
+                    <h1>Think about wood that doesn't break</h1>
+                    <p>
+                        Wood is the structural and tissue that is found in the
+                        trunks and roots of trees and other woody plants. It is
+                        a living thing – a natural compound of strong fiber that
+                        are strong in strength and deep rooted.
+                    </p>
+                    <div class="roundA">
+                        <a href="#"> Buy Woods </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section plank">
+            <div class="sectionContainer">
+                <div class="sectionDescribe">
+                    <h1 class="tDark">
+                        Planks are crucial in the construction of houses.
+                    </h1>
+                    <h1 class="tLight pTop">Explore Planks</h1>
+                </div>
+                <div class="cat4row">
+                    <div class="catItem col-6 col-md-3">
+                        <div class="itemContainer">
+                            <div class="itemThumbnail">
+                                <img src="./media/p1.jpg" />
+                            </div>
+                            <div class="itemInfo">
+                                <h7 class="white">Pure - Oak nature plank</h7>
+                                <h7 class="price white">$20</h7>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catItem col-6 col-md-3">
+                        <div class="itemContainer">
+                            <div class="itemThumbnail">
+                                <img src="./media/p2.jpg" />
+                            </div>
+                            <div class="itemInfo">
+                                <h7 class="white">Pure - Oak nature plank</h7>
+                                <h7 class="price white">$20</h7>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catItem col-6 col-md-3">
+                        <div class="itemContainer">
+                            <div class="itemThumbnail">
+                                <img src="./media/p1.jpg" />
+                            </div>
+                            <div class="itemInfo">
+                                <h7 class="white">Pure - Oak nature plank</h7>
+                                <h7 class="price white">$20</h7>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catItem col-6 col-md-3">
+                        <div class="itemContainer">
+                            <div class="itemThumbnail">
+                                <img src="./media/p2.jpg" />
+                            </div>
+                            <div class="itemInfo">
+                                <h7 class="white">Pure - Oak nature plank</h7>
+                                <h7 class="price white">$20</h7>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section single">
+            <div class="sectionContainer">
+                <div class="col-6 col-md-4 sectionCol"></div>
+                <div class="col-6 col-md-8 sectionCol">
+                    <h1 class="tbg">Sitting promotes flexibility.</h1>
+                    <h1 class="tDark pTop">Explore Chairs</h1>
+                    <div class="cat4row">
+                        <div class="catItem col-12 col-md-6">
+                            <div class="itemContainer">
+                                <div class="itemThumbnail">
+                                    <img src="./media/p3.jpg" />
+                                </div>
+                                <div class="itemInfo">
+                                    <h7 class="white"
+                                        >Pure - Oak nature plank</h7
+                                    >
+                                    <h7 class="price white">$20</h7>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catItem col-12 col-md-6">
+                            <div class="itemContainer">
+                                <div class="itemThumbnail">
+                                    <img src="./media/p3.webp" />
+                                </div>
+                                <div class="itemInfo">
+                                    <h7 class="white"
+                                        >Pure - Oak nature plank</h7
+                                    >
+                                    <h7 class="price white">$20</h7>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section footer">
+            <div class="sectionContainer">
+                <div class="sectionDescribe">
+                    <h1 class="tDark">Be Informed.</h1>
+                    <h2 class="tLight pTop">Subscribe</h2>
+                </div>
+                <form action="" class="bottomForm pTop">
+                    <input type="text" placeholder="e-mail" class="mRight" />
+                    <button class="roundA">Subscribe</button>
+                </form>
+                <div class="bottomBar">
+                    <div class="brand white mRight mBottom">
+                        <h1>Tasooq</h1>
+                    </div>
+                    <p class="white wlight">&copy; Tasooq Store 2022</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
