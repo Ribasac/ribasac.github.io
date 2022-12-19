@@ -1,9 +1,13 @@
-<html lang="en">
+<html lang="en" data-scroll-direction="vertical">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Ribas Chukkan</title>
-        <link rel="icon" type="image/x-icon" href="./media/fav/android-chrome-192x192.png">
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./media/fav/android-chrome-192x192.png"
+        />
         <link rel="stylesheet" href="./css/style.css" />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -32,13 +36,15 @@
                     aria-expanded="false"
                     aria-controls="mobCollapse"
                 >
-                <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </div>
                 <h2>Ribas</h2>
             </div>
             <div class="navContainer d-md-flex d-none">
                 <ul class="nav">
-                    <li class="menu"><a><i class="fa-solid fa-minus"></i></a></li>
+                    <li class="menu">
+                        <a><i class="fa-solid fa-minus"></i></a>
+                    </li>
                     <li><a href="#"> Skills </a></li>
                     <li><a href="#"> Contact </a></li>
                 </ul>
@@ -53,56 +59,88 @@
                 </ul>
             </div>
         </div>
-
-        <div class="section header">
-            <div class="headerTop">
-
-                    <p>#Portfolio</p>
-
-            </div>
-            <div class="headerContent">
-                <div class="headI am"><h2>I<span class="redText">'</span>M</h2></div>
-                <div class="headI"><h2>Ribas<br><span class="secondName">Chukkan</span></h2></div>
-                <div class="headI headRight"><p>Web<br>Developer</p><p>Android<br>Developer</p><p>AI/ML<br>Researcher</p></div>
-            </div>
-            <div class="headerBottom">
-                <div>
-                    A creative designer
-                </div>
-                <div class="headerScroll">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div>
-                    An AI/ML Researcher
-                </div>
-            </div>
-        </div>
-
-        <div class="section plank">
-            
-        </div>
-
-        <div class="section single">
-            
-        </div>
-
-        <div class="section footer">
-            <div class="sectionContainer">
-                <div class="sectionDescribe">
-                    <h1 class="tDark">Be Informed.</h1>
-                    <h2 class="tLight pTop">Subscribe</h2>
-                </div>
-                <form action="" class="bottomForm pTop">
-                    <input type="text" placeholder="e-mail" class="mRight" />
-                    <button class="roundA">Subscribe</button>
-                </form>
-                <div class="bottomBar">
-                    <div class="brand white mRight mBottom">
-                        <h1>Tasooq</h1>
+        <div data-scroll-container>
+            <div data-scroll-section>
+                <div class="section header">
+                    <div class="headerTop">
+                        <p>#Portfolio</p>
                     </div>
-                    <p class="white wlight">&copy; Tasooq Store 2022</p>
+                    <div
+                        class="headerContent"
+                        data-scroll
+                        data-scroll-speed="8"
+                        data-scroll-direction="vertical"
+                    >
+                        <div class="headI am">
+                            <h2>I<span class="redText">'</span>M</h2>
+                        </div>
+                        <div class="headI">
+                            <h2>
+                                Ribas<br /><span class="secondName"
+                                    >Chukkan</span
+                                >
+                            </h2>
+                        </div>
+                        <div class="headI headRight">
+                            <p>Web<br />Developer</p>
+                            <p>Android<br />Developer</p>
+                            <p>AI/ML<br />Researcher</p>
+                        </div>
+                    </div>
+                    <div class="headerBottom">
+                        <div>A creative designer</div>
+                        <div class="headerScroll">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div>An AI/ML Researcher</div>
+                    </div>
+                </div>
+            </div>
+            <div data-scroll-section>
+                <div class="section second">
+                    <div class="secondLeft">
+                        <h2>Web Developer</h2>
+                    </div>
+                    <div class="secondMid">
+                        <p>
+                            I’m a web developer. I spend my whole day,
+                            practically every day, experimenting with HTML, CSS,
+                            and JavaScript; dabbling with Python and Ruby; and
+                            inhaling a wide variety of potentially useless
+                            information through a few hundred RSS feeds. I build
+                            websites that delight and inform. I do it well. I’m
+                            curious, and I enjoy work that challenges me to
+                            learn something new and stretch in a different
+                            direction. I do my best to stay on top of changes in
+                            the state of the art so that I can meet challenges
+                            with tools well suited to the job at hand. The list
+                            of projects I follow on GitHub will give you a good
+                            idea of the types of tools I’d prefer to be using,
+                            and my Instapaper “Starred” list will give you a
+                            glimpse into the reading material I find interesting
+                            enough to share.
+                        </p>
+                    </div>
+                    <div class="secondRight"><img src="./media/web3.png" data-scroll
+                        data-scroll-speed="-8"
+                        data-scroll-direction="vertical"><img src="./media/web2.png" data-scroll
+                        data-scroll-speed="7"
+                        data-scroll-direction="vertical"><img src="./media/web.png" data-scroll
+                        data-scroll-speed="-6"
+                        data-scroll-direction="vertical"></div>
                 </div>
             </div>
         </div>
     </body>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <script src="./js/locomotive-scroll.min.js"></script>
+    <script>
+        const scroller = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+        });
+    </script>
 </html>
