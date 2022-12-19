@@ -19,6 +19,7 @@
         <link href="./fontawesome/css/all.css" rel="stylesheet" />
         <link href="" rel="stylesheet" />
         <link href="" rel="stylesheet" />
+        
     </head>
     <body>
         <script
@@ -60,7 +61,7 @@
             </div>
         </div>
         <div data-scroll-container>
-            <div data-scroll-section>
+            <div data-scroll-section id="section1">
                 <div class="section header">
                     <div class="headerTop">
                         <p>#Portfolio</p>
@@ -90,13 +91,13 @@
                     <div class="headerBottom">
                         <div>A creative designer</div>
                         <div class="headerScroll">
-                            <i class="fa-solid fa-chevron-down"></i>
+                            <a href="#section2" data-scroll-to><i class="fa-solid fa-chevron-down"></i></a>
                         </div>
                         <div>An AI/ML Researcher</div>
                     </div>
                 </div>
             </div>
-            <div data-scroll-section>
+            <div data-scroll-section id="section2">
                 <div class="section second">
                     <div class="secondTop">
                         <p>#Web Developer</p>
@@ -130,9 +131,6 @@
                             <img
                                 class="webNav"
                                 src="./media/webNav.png"
-                                data-scroll
-                                data-scroll-speed="3"
-                                data-scroll-direction="vertical"
                             />
                             <div class="secImg">
                                 <img
@@ -156,13 +154,13 @@
                     </div>
                     <div class="secondBottom">
                         <div class="headerScroll">
-                            <i class="fa-solid fa-chevron-down"></i>
+                            <a href="#section3" data-scroll-to><i class="fa-solid fa-chevron-down"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div data-scroll-section>
+            <div data-scroll-section id="section3">
                 <div class="section second">
                     <div class="secondTop">
                         <p>#AI/Ml Researcher</p>
@@ -203,8 +201,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="secondEnd">
-                        
+                    <div class="secondBottom">
+                        <div class="headerScroll">
+                            <a href="#section1" data-scroll-to><i class="fa-solid fa-chevron-up"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -219,6 +219,7 @@
         const scroller = new LocomotiveScroll({
             el: document.querySelector("[data-scroll-container]"),
             smooth: true,
+            lerp: 1
         });
     </script>
 </html>
