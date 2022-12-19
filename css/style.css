@@ -423,6 +423,17 @@ a{
     padding: 8px 64px;
 }
 
+.second{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondCenter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
 
 .secondLeft, .secondMid{
     padding-right: 64px;
@@ -434,34 +445,63 @@ a{
 
 .secondRight{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100%;
     align-items: center;
-    padding: 64px;
+
 }
 
+.webNav{
+    width: 360px;
+}
 
-
-.secondRight img{
-    margin-left: -64px;
-    height: 70%;
+.secImg img{
+    height: 280px;
     filter: grayscale(100%);
-    border-radius: 8px;
+
 }
 
 .secondRight img:hover{
     filter: none;
 }
 
-.secondRight img:nth-child(1){
-    margin-top: -64px;
+.secImg{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    margin-top: 128px;
 }
 
-.secondRight img:nth-child(2){
-    margin-top: 64px;
+.secImg img:nth-child(1){
 }
 
-.secondRight img:nth-child(3){
-    margin-top: -64px;
+.secImg img:nth-child(2){
+    margin-left: -64px;
+}
+
+.secImg img:nth-child(3){
+    margin-left: -64px;
+}
+
+.secondBottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 64;
+}
+
+.secondEnd {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 32px;
 }
 
