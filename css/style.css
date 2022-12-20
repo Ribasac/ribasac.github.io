@@ -569,3 +569,16 @@ a{
     background: var(--bgc);
 
 }
+
+.pageBottom {
+    padding-top: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.pageBottom .headerScroll{
+    margin-left: 8px;
+    padding: 16px;
+}
