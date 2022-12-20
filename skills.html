@@ -1,0 +1,107 @@
+<html lang="en" data-scroll-direction="vertical">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Ribas Chukkan</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./media/fav/android-chrome-192x192.png"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+        />
+
+        <link href="./fontawesome/css/all.css" rel="stylesheet" />
+        <link href="" rel="stylesheet" />
+        <link href="" rel="stylesheet" />
+    </head>
+    <body>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"
+        ></script>
+
+        <div class="navBar">
+            <div class="brand">
+                <div
+                    class="navToggle d-block d-md-none"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mobCollapse"
+                    aria-expanded="false"
+                    aria-controls="mobCollapse"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <h2>Ribas</h2>
+            </div>
+            <div class="navContainer d-md-flex d-none">
+                <ul class="nav">
+                    <li class="menu">
+                        <a><i class="fa-solid fa-minus"></i></a>
+                    </li>
+                    <li><a href="#"> Skills </a></li>
+                    <li><a href="#"> Contact </a></li>
+                </ul>
+            </div>
+
+            <div class="navMobContainer collapse" id="mobCollapse">
+                <ul class="nav">
+                    <li><a href="./products.html"> Products </a></li>
+                    <li><a href="#"> Floor Planks </a></li>
+                    <li><a href="#"> Furnitures </a></li>
+                    <li><a href="#"> Decorations </a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-scroll-container>
+            <div data-scroll-section id="section1">
+                <div class="section header">
+                    <div class="headerTop">
+                        <p>#Skills</p>
+                    </div>
+                    <div
+                        class="skillsContent"
+                        data-scroll
+                        data-scroll-speed="8"
+                        data-scroll-direction="vertical"
+                    >
+                        <div class="skillsHead col-3">
+                            <h2>MY<br />Skills</h2>
+                        </div>
+                        <div class="skills col-9">
+                            <ul>
+                            <script>
+                                var skills = ["Explainable AI", "Python", "Angular", "Machine Learning", "Web Development","HTML & CSS", "Javascript", "nodeJS", "Wordpress", "Bootstrap", "Kotlin", "C Programming", "MySQL", "Artificial Intelligance", "Android Development"];
+                                var l = skills.length;
+                                for(i=0; i<l; i++){
+                                    var html = '<li>'+skills[i]+'</li>';
+                                    document.write(html);
+                                }
+                            </script>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="headerBottom"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <script src="./js/locomotive-scroll.min.js"></script>
+    <script>
+        const scroller = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+            lerp: 1,
+        });
+    </script>
+</html>
