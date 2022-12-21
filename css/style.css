@@ -117,7 +117,7 @@ body {
 * {
     font-family: "Poppins", sans-serif;
     height: auto;
-    transition: color 2s;
+    transition: background-color 1s ease-out, color 1s ease-out!important;
     color: var(--textcolordark);
     letter-spacing: normal;
 }
