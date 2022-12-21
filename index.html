@@ -52,7 +52,7 @@
                             <i class="fa-solid fa-plus plus"></i
                         ></a>
                     </li>
-                    <li><a href="./skills.html"> Works </a></li>
+                    <li><a href="./works.html"> Works </a></li>
                     <ul class="collapse collapse-horizontal" id="navCollapse">
                         <li><a href="./skills.html"> Skills </a></li>
                         <li><a href="./skills.html"> Education </a></li>
@@ -74,12 +74,9 @@
             <div data-scroll-section id="section1">
                 <div class="section header" data-scroll>
                     <div class="headerTop" data-scroll>
-                        <p>#Portfolio</p>
+                        <p><span class="redText">#</span>Portfolio</p>
                     </div>
-                    <div
-                        class="headerContent"
-                        data-scroll
-                    >
+                    <div class="headerContent" data-scroll>
                         <div class="headI am">
                             <h2>I<span class="redText">'</span>M</h2>
                         </div>
@@ -96,14 +93,27 @@
                             <p>AI/ML<br />Researcher</p>
                         </div>
                     </div>
+                    <div class="headerSocial">
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="headerTheme">
+                        <ul>
+                            <li><a href="#">Light</a></li>
+                            <li><a href="#">Dark</a></li>
+                        </ul>
+                    </div>
                     <div class="headerBottom" data-scroll>
-                        <div>Web Developer</div>
+                        <div></div>
                         <div class="headerScroll">
                             <a href="#section2" data-scroll-to
                                 ><i class="fa-solid fa-chevron-down"></i
                             ></a>
                         </div>
-                        <div>AI/ML Researcher</div>
+                        <div></div>
                     </div>
                 </div>
             </div>
@@ -112,7 +122,10 @@
                     <div class="secondCenter">
                         <div class="secondLeft col-4">
                             <p><span class="redText">#</span> WEB Developer</p>
-                            <h2>I yern to create visually pleasing and yet well optimized websites using latest design and devolpment tools<span class="redDot">.</span>
+                            <h2>
+                                I yern to create visually pleasing and yet well
+                                optimized websites using latest design and
+                                devolpment tools<span class="redDot">.</span>
                             </h2>
                         </div>
                         <div class="secondRight col-8">
@@ -170,15 +183,19 @@
                             </div>
                         </div>
                         <div class="secondLeft col-4">
-                            <p><span class="redText">#</span> AI/ML Researcher</p>
-                            <h2>I yern to create visually pleasing and yet well optimized websites using latest design and devolpment tools<span class="redDot">.</span>
+                            <p>
+                                <span class="redText">#</span> AI/ML Researcher
+                            </p>
+                            <h2>
+                                I yern to create visually pleasing and yet well
+                                optimized websites using latest design and
+                                devolpment tools<span class="redDot">.</span>
                             </h2>
                         </div>
-                        
                     </div>
                     <div class="secondBottom">
                         <div class="headerScroll">
-                            <a href="#section1" data-scroll-to
+                            <a href="#section4" data-scroll-to
                                 ><i class="fa-solid fa-chevron-down"></i
                             ></a>
                         </div>
@@ -186,6 +203,7 @@
                 </div>
             </div>
 
+            
         </div>
     </body>
     <link
@@ -194,12 +212,5 @@
     />
     <script src="./js/script.js"></script>
     <script src="./js/locomotive-scroll.min.js"></script>
-    <script>
-        const scroller = new LocomotiveScroll({
-            el: document.querySelector("#js-scroll"),
-            smooth: true,
-            lerp: 0.06,
-        });
-
-    </script>
+    <script src="./js/scroll.js"></script>
 </html>
