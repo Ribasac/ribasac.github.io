@@ -19,3 +19,9 @@ function lightMode(){
     r.style.setProperty('--bgtrans', 'rgba(224, 224, 224, 0.5)');
     localStorage.setItem('theme', 'light'); 
 }
+
+const f = ()=>{
+    console.log("test");
+}
+
+export default f;

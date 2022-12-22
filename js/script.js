@@ -1,3 +1,5 @@
+import f from "./theme";
+
 navExpand = 0;
 
 
@@ -18,3 +20,4 @@ function expandNav(){
 }
 
 
+f();
