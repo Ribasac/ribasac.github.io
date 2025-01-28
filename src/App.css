@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@media screen and (min-width: 768px) {
+    :root {
+        --font-family: "Poppins", serif;
+        --global-color: #d9d9d9;
+        --global-dark: #1a1a1a;
+        --bg: #d9d9d9;
+        --second-font: "Ephesis";
+        --white: #fff;
+        --font-size: 16px;
+        --font-rem: 16rem;
+        --font-rem2: 6rem;
+        --font-rem3: 1rem;
+        --font-rem4: 8rem;
+        --font-rem5: 1.2rem;
+        --heading-rem: 4rem;
+        --margin-px1: -480px;
+        --margin-px2: -320px;
+        --margin-px3: 480px;
+        --multi-height: 100vh;
+        --padding-vert: 4rem;
+        --padding-hor: 3.5rem;
+        --bottom-sep: 1.5rem;
+        --hor-sep: 3rem;
+        --responsive-dir: row;
+        --vert-sep: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --font-family: "Poppins", serif;
+        --global-color: #d9d9d9;
+        --global-dark: #1a1a1a;
+        --bg: #d9d9d9;
+        --second-font: "Ephesis";
+        --white: #fff;
+        --font-size: 4px;
+        --font-rem: 16rem;
+        --font-rem2: 11rem;
+        --font-rem3: 4rem;
+        --font-rem4: 14rem;
+        --font-rem5: 4rem;
+        --heading-rem: 16rem;
+        --margin-px1: -80px;
+        --margin-px2: -60px;
+        --margin-px3: 80px;
+        --multi-height: 45vh;
+        --padding-vert: 8rem;
+        --padding-hor: 5rem;
+        --bottom-sep: 0.5rem;
+        --hor-sep: 12rem;
+        --vert-sep: 1rem;
+        --responsive-dir: column;
+    }
+}
+
+html {
+    font-size: var(--font-size);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    color: var(--global-dark);
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased !important;
+    line-height: 1;
+}
+.NavContainer {
+    width: 100%;
+    padding: 30px 48px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--global-color);
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff00;
+    mix-blend-mode: difference;
+    z-index: 10000;
+}
+.Nav li {
+    display: inline;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--global-color);
+}
+
+.Brand {
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    mix-blend-mode: difference;
+}
+
+.NavIcon {
+    width: 120px;
+    height: 20px;
+    border-bottom: 2px solid var(--bg);
+    border-top: 2px solid var(--bg);
+    color: #fff;
+}
+
+.HomePage {
+    padding: 0;
+    margin: 0;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.Section {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg);
+    overflow: hidden;
+    will-change: "transform";
+}
+
+.Hero {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.HeroBG {
+    background: url("/src/Assets/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.HeroHeader {
+    color: var(--global-color);
+    font-size: var(--font-rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0px;
+}
+.HeroSub {
+    font-size: var(--font-rem2);
+    line-height: 0.3;
+    display: flex;
+    font-weight: 100;
+    font-family: var(--second-font);
+    color: var(--global-color);
+}
+
+.HeroBottom {
+    position: absolute;
+    bottom: 16%;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-size: var(--font-rem3);
+    color: var(--global-color);
+}
+
+.About {
+    background: var(--bg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: var(--multi-height);
+}
+
+.AboutRow {
+    font-size: var(--font-rem4);
+    line-height: 0.85em;
+}
+
+.AboutRow1,
+.AboutRow3,
+.AboutRow4 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.AboutRow2,
+.AboutRow5 {
+    font-family: var(--second-font);
+}
+
+.AboutRow1,
+.AboutRow4 {
+    margin-left: var(--margin-px1);
+}
+.AboutRow2 {
+    margin-left: var(--margin-px2);
+}
+.AboutRow3,
+.AboutRow5 {
+    margin-left: var(--margin-px3);
+}
+
+.Me {
+    background: var(--bg);
+    padding: 0 var(--padding-hor);
+    min-height: 80vh;
+    height: 80vh;
+}
+
+.MeAbout {
+    width: 100%;
+    flex-grow: 0;
+    padding: var(--padding-hor) 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: var(--heading-rem);
+    font-weight: 500;
+}
+
+.Me h1 {
+    text-align: center;
+    padding-right: var(--bottom-sep);
+    border-right: 1px solid var(--global-dark);
+    margin-right: var(--hor-sep);
+    width: 10%;
+}
+
+.MeRight {
+    width: 60%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.Me h2 {
+    line-height: 1.5em;
+    font-size: var(--font-rem5);
+    font-weight: 400;
+    width: 100%;
+    padding-right: var(--hor-sep);
+    text-align: justify;
+}
+
+.MeP {
+    width: 60%;
+    padding-right: var(--bottom-sep);
+    text-align: justify;
+}
+
+.MeP p {
+    line-height: 1.5em;
+    padding-bottom: var(--bottom-sep);
+    font-size: 1rem;
+}
+
+.MeBottom {
+    justify-content: flex-start;
+    row-gap: var(--hor-sep);
+    column-gap: var(--hor-sep);
+    font-size: var(--font-rem3);
+}
+
+.MeBottom p {
+    line-height: 1.5em;
+}
+
+.MeBottom a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--global-dark);
+}
+
+.MeImage {
+    width: 12rem;
+    height: 100%;
+    background: url("./components/Home/Assets/About.jpg");
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .Me {
+        background: var(--bg);
+        padding: 0 var(--padding-hor);
+        min-height: fit-content;
+        height: 40vh;
+    }
+
+    .MeAbout {
+        width: 100%;
+        flex-grow: 0;
+        padding: var(--padding-vert) 0;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: var(--heading-rem);
+        font-weight: 500;
+    }
+
+    .Me h1 {
+        text-align: center;
+        padding-right: var(--bottom-sep);
+        border-right: 1px solid var(--global-dark);
+        margin-right: var(--hor-sep);
+        width: 10%;
+        display: none;
+    }
+
+    .MeRight {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .Me h2 {
+        line-height: 1.5em;
+        font-size: var(--font-rem5);
+        font-weight: 400;
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .MeP {
+        width: 60%;
+        padding-right: var(--bottom-sep);
+        text-align: justify;
+    }
+
+    .MeP p {
+        line-height: 1.5em;
+        padding-bottom: var(--bottom-sep);
+    }
+
+    .MeBottom {
+        justify-content: space-between;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: var(--hor-sep) 0;
+        display: none;
+    }
+
+    .MeBottom p {
+        line-height: 1.5em;
+    }
+
+    .MeBottom a {
+        text-decoration: none;
+        border-bottom: 1px solid var(--global-dark);
+    }
+
+    .MeImage {
+        width: 12rem;
+        height: 100%;
+        background: url("./components/Home/Assets/About.jpg");
+        background-size: cover;
+        display: none;
+    }
+}
+
+.Work {
+    height: fit-content;
+    align-items: center;
+    padding: var(--padding-vert);
+    z-index: 1000;
+}
+
+.Work h1 {
+    font-size: var(--font-rem4);
+    text-align: center;
+    margin-left: 1em;
+}
+
+.Curv {
+    font-family: var(--second-font);
+    text-transform: none;
+    line-height: 0.5em;
+}
+
+.Work .Curv {
+    margin-left: -2em;
+}
+.WorkSection {
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: var(--vert-sep);
+    align-content: center;
+}
+.WorkBG {
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: inset 0 2000px 50px rgba(0, 0, 0, 0.5);
+}
+
+.WorkHeader {
+    color: var(--global-color);
+    font-size: var(--font-rem4);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0px;
+    text-align: center;
+}
