@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.737aaba6.css",
-    "main.js": "/static/js/main.da4b9c57.js",
+    "main.css": "/static/css/main.dac0366e.css",
+    "main.js": "/static/js/main.3edd513b.js",
     "static/js/488.4de00ce2.chunk.js": "/static/js/488.4de00ce2.chunk.js",
+    "static/media/ml.mp4": "/static/media/ml.29989dd7ab000e9b15ba.mp4",
+    "static/media/graphics.mp4": "/static/media/graphics.01049a47fdb4b7276578.mp4",
+    "static/media/web.mp4": "/static/media/web.27846eb05a1b879b0f3f.mp4",
     "static/media/About.jpg": "/static/media/About.137ae4b3d34cbc5da793.jpg",
     "static/media/hero.jpg": "/static/media/hero.f8028c566d2eade7348d.jpg",
     "static/media/Tennis.jpg": "/static/media/Tennis.2b1c7aba9c718b308f37.jpg",
-    "static/media/exp.jpg": "/static/media/exp.232c49ba5ea1752befde.jpg",
     "static/media/forbes.jpg": "/static/media/forbes.60934423a5c92452788e.jpg",
     "index.html": "/index.html",
-    "main.737aaba6.css.map": "/static/css/main.737aaba6.css.map",
-    "main.da4b9c57.js.map": "/static/js/main.da4b9c57.js.map",
+    "main.dac0366e.css.map": "/static/css/main.dac0366e.css.map",
+    "main.3edd513b.js.map": "/static/js/main.3edd513b.js.map",
     "488.4de00ce2.chunk.js.map": "/static/js/488.4de00ce2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.737aaba6.css",
-    "static/js/main.da4b9c57.js"
+    "static/css/main.dac0366e.css",
+    "static/js/main.3edd513b.js"
   ]
 }
