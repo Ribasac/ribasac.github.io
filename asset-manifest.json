@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.70de7bb0.css",
-    "main.js": "/static/js/main.17268cef.js",
+    "main.css": "/static/css/main.387e8308.css",
+    "main.js": "/static/js/main.cd4d33cd.js",
     "static/js/488.4de00ce2.chunk.js": "/static/js/488.4de00ce2.chunk.js",
     "static/media/ml.mp4": "/static/media/ml.f360e9884f144d3a5663.mp4",
     "static/media/graphics.mp4": "/static/media/graphics.01049a47fdb4b7276578.mp4",
     "static/media/web.mp4": "/static/media/web.27846eb05a1b879b0f3f.mp4",
+    "static/media/CalFit.jpg": "/static/media/CalFit.ce6460c17c5072eda947.jpg",
     "static/media/About.jpg": "/static/media/About.137ae4b3d34cbc5da793.jpg",
     "static/media/hero.jpg": "/static/media/hero.f8028c566d2eade7348d.jpg",
-    "static/media/Tennis.jpg": "/static/media/Tennis.2b1c7aba9c718b308f37.jpg",
     "static/media/forbes.jpg": "/static/media/forbes.60934423a5c92452788e.jpg",
+    "static/media/Tennis.jpg": "/static/media/Tennis.b7edf232ce0ebf5f65ce.jpg",
     "index.html": "/index.html",
-    "main.70de7bb0.css.map": "/static/css/main.70de7bb0.css.map",
-    "main.17268cef.js.map": "/static/js/main.17268cef.js.map",
+    "main.387e8308.css.map": "/static/css/main.387e8308.css.map",
+    "main.cd4d33cd.js.map": "/static/js/main.cd4d33cd.js.map",
     "488.4de00ce2.chunk.js.map": "/static/js/488.4de00ce2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.70de7bb0.css",
-    "static/js/main.17268cef.js"
+    "static/css/main.387e8308.css",
+    "static/js/main.cd4d33cd.js"
   ]
 }
