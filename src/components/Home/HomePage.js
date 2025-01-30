@@ -8,6 +8,11 @@ import Work from "./Reusable/Work";
 import WorkSection from "./Reusable/WorkSection";
 import banner1 from "./Assets/Tennis.jpg";
 import banner2 from "./Assets/forbes.jpg";
+import banner3 from "./Assets/CalFit.jpg";
+import Services from "./Reusable/Services";
+import Footer from "../Reusable/Footer";
+import PageProgress from "../Reusable/PageProgress";
+import GoTop from "../Reusable/GoTop";
 
 export default function HomePage() {
     return (
@@ -16,12 +21,13 @@ export default function HomePage() {
             <Hero></Hero>
             <About></About>
             <Me></Me>
+            <Services></Services>
             <Work></Work>
             <WorkSection
-                Banner={banner1}
-                first="Middle"
-                second="Stump"
-                details="Sports Showroom"
+                Banner={banner3}
+                first="CalFit"
+                second="Fitness"
+                details="GenAI Fitness App"
             ></WorkSection>
             <WorkSection
                 Banner={banner2}
@@ -29,6 +35,15 @@ export default function HomePage() {
                 second="Chartered Accountant"
                 details="Chartered Accountant Firm"
             ></WorkSection>
+            <WorkSection
+                Banner={banner1}
+                first="Middle"
+                second="Stump"
+                details="Sports Showroom"
+            ></WorkSection>
+            <GoTop></GoTop>
+            {/* <PageProgress></PageProgress> */}
+            <Footer></Footer>
         </div>
     );
 }

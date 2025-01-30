@@ -5,7 +5,12 @@ export default function Hero() {
     return (
         <Container className="Section Hero">
             <div className="HeroBG" data-scroll data-scroll-speed="-4"></div>
-            <div className="HeroHeader" data-scroll data-scroll-speed="2">
+            <div
+                className="HeroHeader"
+                data-scroll
+                data-scroll-speed="2"
+                id="hero"
+            >
                 RIBAS.
             </div>
             <div className="HeroSub" data-scroll data-scroll-speed="2">

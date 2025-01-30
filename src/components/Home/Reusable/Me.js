@@ -12,7 +12,6 @@ export default function Me() {
         scroll.on("scroll", (obj) => {
             const scrollY = obj.scroll.y;
             const scaleFactor = 0.6 + scrollY * 0.0003;
-            console.log(scrollY);
             // Adjust for smoothness
             const newScale = Math.min(scaleFactor, 1); // Limit scale size
 
@@ -67,7 +66,6 @@ export default function Me() {
                             </p>
                         </div>
                     </div>
-                    <div className="MeImage"></div>
                 </div>
             </div>
         </Container>

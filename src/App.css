@@ -7,15 +7,16 @@
         --font-family: "Poppins", serif;
         --global-color: #d9d9d9;
         --global-dark: #1a1a1a;
+        --dark-bg: #d9d9d9;
         --bg: #d9d9d9;
         --second-font: "Ephesis";
         --white: #fff;
         --font-size: 16px;
         --font-rem: 16rem;
         --font-rem2: 6rem;
-        --font-rem3: 1rem;
+        --font-rem3: 0.8rem;
         --font-rem4: 8rem;
-        --font-rem5: 1.2rem;
+        --font-rem5: 1rem;
         --heading-rem: 4rem;
         --margin-px1: -480px;
         --margin-px2: -320px;
@@ -27,6 +28,7 @@
         --hor-sep: 3rem;
         --responsive-dir: row;
         --vert-sep: 1rem;
+        --neg-half-font-rem: -8rem;
     }
 }
 
@@ -51,10 +53,11 @@
         --multi-height: 45vh;
         --padding-vert: 8rem;
         --padding-hor: 5rem;
-        --bottom-sep: 0.5rem;
+        --bottom-sep: 2rem;
         --hor-sep: 12rem;
         --vert-sep: 1rem;
         --responsive-dir: column;
+        --neg-half-font-rem: -8rem;
     }
 }
 
@@ -74,10 +77,10 @@ body {
     box-sizing: border-box;
     font-family: var(--font-family);
     color: var(--global-dark);
-    font-smooth: always;
     -webkit-font-smoothing: antialiased !important;
     line-height: 1;
 }
+
 .NavContainer {
     width: 100%;
     padding: 30px 48px;
@@ -104,15 +107,37 @@ body {
     height: 48px;
     padding: 0;
     margin: 0;
-    mix-blend-mode: difference;
+    transition: all 1s;
+}
+
+.rightNav {
+    column-gap: var(--hor-sep);
+}
+
+.BookButton {
+    padding: 8px 32px;
+    border-radius: 32px;
+    border: 2px solid var(--white);
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--font-rem3);
 }
 
 .NavIcon {
     width: 120px;
-    height: 20px;
-    border-bottom: 2px solid var(--bg);
-    border-top: 2px solid var(--bg);
+    height: 16px;
+    border-bottom: 2px solid var(--white);
+    border-top: 2px solid var(--white);
     color: #fff;
+    transition: all 1s;
+}
+
+.Brand:hover {
+    transform: rotateY(180deg);
+}
+
+.NavIcon:hover {
+    transform: rotateX(180deg);
 }
 
 .HomePage {
@@ -144,11 +169,11 @@ body {
 }
 
 .Section {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: var(--bg);
     overflow: hidden;
-    will-change: "transform";
+    will-change: transform;
 }
 
 .Hero {
@@ -261,7 +286,7 @@ h1 {
 }
 
 .MeRight {
-    width: 60%;
+    width: 84%;
     height: 100%;
     justify-content: space-between;
 }
@@ -272,13 +297,15 @@ h1 {
     font-weight: 400;
     width: 100%;
     padding-right: var(--hor-sep);
-    text-align: justify;
+    text-align: left;
+    color: var(--global-dark);
+    opacity: 0.6;
 }
 
 .MeP {
     width: 60%;
     padding-right: var(--bottom-sep);
-    text-align: justify;
+    text-align: left;
 }
 
 .MeP p {
@@ -308,6 +335,7 @@ h1 {
     height: 100%;
     background: url("./components/Home/Assets/About.jpg");
     background-size: cover;
+    margin-bottom: -2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -399,10 +427,11 @@ h1 {
     height: fit-content;
     align-items: center;
     padding: var(--padding-vert);
-    z-index: 1000;
+    padding-top: 16rem;
 }
 
-.Work h1 {
+.Work h1,
+.ServicesStart h1 {
     font-size: var(--font-rem4);
     text-align: center;
     margin-left: 1em;
@@ -414,10 +443,13 @@ h1 {
     line-height: 0.5em;
 }
 
-.Work .Curv {
+.Work .Curv,
+.ServicesStart .Curv {
     margin-left: -2em;
 }
 .WorkSection {
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
     flex-wrap: wrap;
     align-items: center;
@@ -429,10 +461,14 @@ h1 {
     background-position: center;
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 0;
     box-shadow: inset 0 2000px 50px rgba(0, 0, 0, 0.5);
+}
+
+.ServiveBG {
+    top: -50vh;
 }
 
 .WorkHeader {
@@ -442,4 +478,242 @@ h1 {
     line-height: 1;
     letter-spacing: 0px;
     text-align: center;
+}
+
+.Services {
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: var(--vert-sep);
+    align-content: center;
+    height: 232vw;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    .Services {
+        height: 400vw;
+    }
+}
+
+.ServiceBG {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    filter: grayscale(500%);
+    will-change: transform;
+    transition: ease;
+}
+
+/* .shadowH {
+    text-shadow: 8px 8px 64px #000000;
+} */
+
+.ServicesHeader {
+    color: var(--global-color);
+    font-size: var(--font-rem4);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0px;
+    text-align: center;
+    transition: ease;
+}
+
+.ServicesSub {
+    font-size: var(--font-rem2);
+    line-height: 0.3;
+    display: flex;
+    font-weight: 100;
+    font-family: var(--second-font);
+    color: var(--global-color);
+}
+.ExpColumn {
+    width: 100%;
+    height: 100%;
+}
+.ServicesStart {
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+}
+
+.ServicesWrapper {
+    height: 300vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300vw;
+    will-change: transform;
+    transition: ease;
+}
+
+.ServiceCardContainer {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    /* padding-left: 100vw; */
+    justify-content: flex-start;
+    width: 300vw;
+    margin-left: -20vw;
+    will-change: transform;
+}
+
+.ServiceCard {
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    will-change: transform;
+    transition: ease;
+    margin-right: 4rem;
+    height: 64vh;
+    width: 64vw;
+    border-radius: 4rem;
+}
+
+.Footer {
+    background: var(--dark-bg);
+    overflow: hidden;
+    margin-top: -2px;
+    padding: 0 var(--hor-sep);
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.borderBottom {
+    border-bottom: 1px solid var(--global-dark);
+}
+
+.FooterBottom {
+    width: 100%;
+    padding: var(--bottom-sep) 0;
+    font-size: var(--font-rem5);
+}
+
+.BottomRow {
+    padding: var(--bottom-sep) 0;
+    justify-content: space-between;
+    width: 100%;
+    p {
+        font-size: var(--font-rem3);
+        font-weight: 400;
+    }
+}
+
+.SocialFooter {
+    list-style: none;
+    justify-content: flex-end;
+    row-gap: var(--bottom-sep);
+    column-gap: var(--bottom-sep);
+    padding: 0 1rem;
+}
+
+.FooterTop {
+    flex-grow: 1;
+    padding: var(--padding-hor);
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.FooterTop .Curv {
+    font-size: var(--font-rem2);
+    line-height: 1em;
+}
+
+.FooterLeft {
+    width: 20rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.FooterRight {
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.ContactCard {
+    border-radius: 100%;
+    height: var(--font-rem);
+    width: var(--font-rem);
+    margin: 1rem;
+    border: 2px solid var(--global-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-rem2);
+    font-weight: 100;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.ContactInfoCard {
+    position: absolute;
+    top: calc(var(--font-rem) / 2);
+    left: calc(var(--font-rem) / 2);
+    border-radius: 100%;
+    height: 0;
+    width: 0;
+    background: var(--global-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-rem2);
+    font-weight: 500;
+    overflow: hidden !important;
+    color: var(--global-color);
+    font-size: var(--font-rem3);
+    transition: all 1s;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ContactCard:hover .ContactInfoCard {
+    margin-top: var(--neg-half-font-rem);
+    margin-left: var(--neg-half-font-rem);
+    height: 100%;
+    width: 100%;
+}
+
+.PageProgress {
+    position: fixed;
+    top: 50%;
+    margin-top: -25vh;
+    right: var(--padding-hor);
+    width: 0.5rem;
+    height: 50vh;
+    background: #ffffff50;
+    backdrop-filter: blur(64px);
+    border-radius: 1rem;
+    z-index: 2000;
+}
+
+.GoTop {
+    position: fixed;
+    right: -96px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: var(--white);
+    mix-blend-mode: difference;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.GoTop:hover {
+    scale: 1.2;
 }
