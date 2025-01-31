@@ -19,6 +19,7 @@ import Loader from "../Reusable/Loader";
 
 export default function HomePage() {
     const [loading, setLoading] = useState(true);
+    const [navState, setNav] = useState(false);
     useEffect(() => {
         loading
             ? document.querySelector("body").classList.add("loading")
@@ -27,41 +28,42 @@ export default function HomePage() {
 
     return (
         <AnimatePresence>
-            {loading && (
+            {loading ? (
                 <motion.div key="loader">
                     <Loader setLoading={setLoading} />
                 </motion.div>
+            ) : (
+                <motion.div id="HomePage">
+                    <NavBar navState={navState} setNav={setNav} />
+                    {navState && <NavMenu></NavMenu>}
+                    <Hero></Hero>
+                    <About></About>
+                    <Me></Me>
+                    <Services></Services>
+                    <Work></Work>
+                    <WorkSection
+                        Banner={banner3}
+                        first="CalFit"
+                        second="Fitness"
+                        details="GenAI Fitness App"
+                    ></WorkSection>
+                    <WorkSection
+                        Banner={banner2}
+                        first="Forbes"
+                        second="Chartered Accountant"
+                        details="Chartered Accountant Firm"
+                    ></WorkSection>
+                    <WorkSection
+                        Banner={banner1}
+                        first="Middle"
+                        second="Stump"
+                        details="Sports Showroom"
+                    ></WorkSection>
+                    <GoTop></GoTop>
+                    {/* <PageProgress></PageProgress> */}
+                    <Footer></Footer>
+                </motion.div>
             )}
-            <motion.div id="HomePage">
-                <NavBar />
-                {/* <NavMenu></NavMenu> */}
-                <Hero></Hero>
-                <About></About>
-                <Me></Me>
-                <Services></Services>
-                <Work></Work>
-                <WorkSection
-                    Banner={banner3}
-                    first="CalFit"
-                    second="Fitness"
-                    details="GenAI Fitness App"
-                ></WorkSection>
-                <WorkSection
-                    Banner={banner2}
-                    first="Forbes"
-                    second="Chartered Accountant"
-                    details="Chartered Accountant Firm"
-                ></WorkSection>
-                <WorkSection
-                    Banner={banner1}
-                    first="Middle"
-                    second="Stump"
-                    details="Sports Showroom"
-                ></WorkSection>
-                <GoTop></GoTop>
-                {/* <PageProgress></PageProgress> */}
-                <Footer></Footer>
-            </motion.div>
         </AnimatePresence>
     );
 }

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../Assets/logo.png";
 
-export default function NavBar() {
+export default function NavBar({ navState, setNav }) {
     return (
         <div
             className="NavContainer"
@@ -13,7 +13,14 @@ export default function NavBar() {
                 <a href="bottom" className="BookButton" data-scroll-to>
                     Book A Meeting
                 </a>
-                <div className="NavIcon"></div>
+                {!navState ? (
+                    <div className="NavIcon" onClick={() => setNav(true)}></div>
+                ) : (
+                    <div className="NavClose" onClick={() => setNav(false)}>
+                        <div className="close1"></div>
+                        <div className="close2"></div>
+                    </div>
+                )}
             </div>
         </div>
     );
