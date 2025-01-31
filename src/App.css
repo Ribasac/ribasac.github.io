@@ -218,19 +218,19 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10000;
-}
-
-.loader-inner {
-    height: 100%;
-    width: 100%;
-    background: var(--bg);
-}
-
-.childLoad {
-    height: 100px;
-    width: 100vw;
-    background: var(--global-dark);
+    z-index: 100001;
+    .loader-inner {
+        height: 100%;
+        width: 100%;
+        background: var(--bg);
+        z-index: 10001;
+        .childLoad {
+            height: 100vh;
+            width: 100vw;
+            background: var(--global-dark);
+            z-index: 10002;
+        }
+    }
 }
 
 .HomePage {

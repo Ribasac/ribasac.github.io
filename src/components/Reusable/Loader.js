@@ -13,7 +13,7 @@ export default function Loader({ setLoading }) {
             height: 0,
             transition: {
                 ease: [0.6, 0.01, 0.05, 0.95],
-                duration: 0.8,
+                duration: 1,
             },
         },
     };
@@ -21,19 +21,18 @@ export default function Loader({ setLoading }) {
         hidden: { opacity: 0, y: 100 * vh },
         show: {
             opacity: 1,
-            y: -20,
-            height: 0,
+            y: 0,
             transition: {
                 ease: [0.6, 0.01, 0.05, 0.95],
                 duration: 0.8,
             },
         },
         exit: {
-            opacity: 0,
-            y: -200,
+            height: 0,
             transition: {
                 ease: "easeInOut",
-                duration: 0.8,
+                ease: [0.6, 0.01, 0.05, 0.95],
+                duration: 0.6,
             },
         },
     };
