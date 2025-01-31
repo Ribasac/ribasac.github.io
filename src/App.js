@@ -1,6 +1,7 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/Home/HomePage";
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import {
     LocomotiveScrollProvider,
     useLocomotiveScroll,

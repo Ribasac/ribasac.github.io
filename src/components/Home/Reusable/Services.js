@@ -91,21 +91,24 @@ export default function Services() {
                 >
                     <ServiceCard
                         Banner={banner1}
-                        first="Web"
-                        second="Development"
-                        // delay="0.1"
+                        first="Building"
+                        second="Websites"
+                        details="Need a website that doesn't look like it was built in 1999?"
+                        delay="0.1"
                     ></ServiceCard>
                     <ServiceCard
                         Banner={banner2}
-                        first="ML"
-                        second="Development"
-                        // delay="0.06"
+                        first="Machine"
+                        second="Learning"
+                        details="Want to harness the power of AI but don't know where to start?"
+                        delay="0.09"
                     ></ServiceCard>
                     <ServiceCard
                         Banner={banner3}
                         first="Graphic"
                         second="Design"
-                        // delay="0.04"
+                        details="Need eye-catching visuals that make your brand pop?"
+                        delay="0.08"
                     ></ServiceCard>
                 </div>
             </div>

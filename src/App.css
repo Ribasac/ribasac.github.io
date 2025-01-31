@@ -80,6 +80,9 @@ body {
     -webkit-font-smoothing: antialiased !important;
     line-height: 1;
 }
+.white {
+    color: var(--global-color);
+}
 
 .NavContainer {
     width: 100%;
@@ -121,11 +124,18 @@ body {
     color: var(--white);
     text-decoration: none;
     font-size: var(--font-rem3);
+    transition: all 1s;
+}
+
+@media screen and (max-width: 768px) {
+    .BookButton {
+        display: none;
+    }
 }
 
 .NavIcon {
     width: 120px;
-    height: 16px;
+    height: 24px;
     border-bottom: 2px solid var(--white);
     border-top: 2px solid var(--white);
     color: #fff;
@@ -138,6 +148,89 @@ body {
 
 .NavIcon:hover {
     transform: rotateX(180deg);
+}
+
+.BookButton:hover {
+    padding: 8px 48px;
+}
+
+.NavMenu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4000;
+    padding: var(--padding-vert) var(--padding-hor);
+
+    .NavMenuRight {
+        flex-grow: 1;
+        height: 100%;
+        align-items: flex-end;
+        justify-content: flex-start;
+        ul {
+            list-style: none;
+            column-gap: 1rem;
+            justify-content: flex-end;
+            width: 100%;
+            li {
+                font-size: 2em;
+            }
+            .connectli {
+                margin-right: var(--vert-sep);
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+.NavMenuContainer {
+    width: 60%;
+    height: 100%;
+    justify-content: flex-end;
+    row-gap: var(--hor-sep);
+    /* border-right: 2px solid var(--global-dark); */
+    align-items: flex-start;
+    ul {
+        list-style: none;
+        padding: 0 v0;
+
+        align-items: flex-start;
+        li {
+            font-size: 8rem;
+            /* border-left: 2px solid var(--global-dark); */
+            margin-top: var(--hor-sep);
+            padding-left: var(--hor-sep);
+            text-transform: uppercase;
+            .Curv {
+                font-size: 2rem;
+                /* display: none; */
+                border-right: 1px solid var(--global-dark);
+                padding-right: 1em;
+            }
+        }
+    }
+}
+
+.loader {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.loader-inner {
+    height: 100%;
+    width: 100%;
+    background: var(--bg);
+}
+
+.childLoad {
+    height: 100px;
+    width: 100vw;
+    background: var(--global-dark);
 }
 
 .HomePage {
@@ -503,9 +596,13 @@ h1 {
     width: 100vw;
     height: 100vh;
     z-index: 0;
-    filter: grayscale(500%);
+    /* filter: contrast(60%); */
     will-change: transform;
     transition: ease;
+}
+
+.topmargin {
+    margin-top: -16vh;
 }
 
 /* .shadowH {
@@ -574,7 +671,21 @@ h1 {
     margin-right: 4rem;
     height: 64vh;
     width: 64vw;
-    border-radius: 4rem;
+    border-radius: 3.5vw;
+}
+
+.goTo {
+    height: 4vw;
+    width: 4vw;
+    border-radius: 100%;
+    color: var(--global-dark);
+    background: var(--bg);
+    position: absolute;
+    top: 2.5vw;
+    right: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Footer {
@@ -676,6 +787,7 @@ h1 {
     transition: all 1s;
     text-overflow: ellipsis;
     white-space: nowrap;
+    will-change: auto;
 }
 
 .ContactCard:hover .ContactInfoCard {

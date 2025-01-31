@@ -41,13 +41,24 @@ export default function Me() {
                     </h1>
                     <div className="column MeRight">
                         <h2>
-                            Over the years, I have worked on web development and
-                            machine learning projects, designing and building
-                            scalable solutions that prioritize performance,
-                            efficiency, and a seamless user experience. I have
-                            also delivered freelance products that seamlessly
-                            blend functionality, aesthetics, and modern
-                            technology to create impactful digital solutions.
+                            I help businesses and individuals bring their
+                            digital visions to life. I believe that great
+                            digital products are born from collaboration and a
+                            deep understanding of the problem at hand. I work
+                            closely with my clients, listening to their ideas
+                            and challenges, to develop tailored solutions that
+                            meet their specific needs. My background in web
+                            development and machine learning allows me to create
+                            robust, scalable systems that not only perform
+                            exceptionally well but also provide a seamless and
+                            engaging user experience. I'm passionate about the
+                            entire process, from brainstorming initial concepts
+                            to deploying the final product. I also enjoy
+                            collaborating on freelance projects, where I can
+                            bring my expertise to a diverse range of challenges
+                            and craft digital products that are both beautiful,
+                            effective, and perfectly aligned with my client's
+                            goals.
                         </h2>
                         <div className="row MeBottom">
                             <p>
