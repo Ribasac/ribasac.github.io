@@ -13,6 +13,9 @@
   --text-body: clamp(18px, 1.6vw, 26px);
   --text-heading: clamp(28px, 7vw, 94px);
   --text-display: clamp(40px, 8.5vw, 132px);
+  --menu-height: 48px;
+  --menu-x-padding: 22px;
+  --menu-label: 12px;
 }
 
 @theme inline {
@@ -28,8 +31,19 @@
   --text-body: var(--text-body);
   --text-heading: var(--text-heading);
   --text-display: var(--text-display);
+  --menu-height: var(--menu-height);
+  --menu-x-padding: var(--menu-x-padding);
+  --menu-label: var(--menu-label);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+@media (width >= 40rem) {
+  :root {
+    --menu-height: 44px;
+    --menu-x-padding: 20px;
+    --menu-label: 12px;
+  }
 }
 
 @utility scrollbar-hide {

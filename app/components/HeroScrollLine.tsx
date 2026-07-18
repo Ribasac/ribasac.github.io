@@ -85,7 +85,7 @@ export function HeroScrollLine() {
   return (
     <svg
       aria-hidden="true"
-      className="pointer-events-none absolute top-[12svh] right-8 z-10 h-[76svh] w-[clamp(130px,20vw,300px)] overflow-visible text-foreground sm:right-12 md:right-20"
+      className="pointer-events-none absolute top-[12svh] right-12 z-10 hidden h-[76svh] w-[clamp(130px,20vw,300px)] overflow-visible text-foreground sm:block md:right-20"
       fill="none"
       preserveAspectRatio="none"
       viewBox="0 0 260 940"

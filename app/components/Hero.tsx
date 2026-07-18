@@ -22,7 +22,7 @@ export function Hero() {
       </div>
       <svg
         aria-hidden="true"
-        className="hero-signature pointer-events-none absolute top-1/2 left-10 z-10 h-auto w-[clamp(158px,21vw,280px)] origin-center -translate-y-1/2 -rotate-90 text-foreground sm:left-14 md:left-20"
+        className="hero-signature pointer-events-none absolute bottom-[9svh] left-1/2 z-10 h-auto w-[clamp(140px,46vw,210px)] origin-center -translate-x-1/2 text-foreground/75 sm:top-1/2 sm:bottom-auto sm:left-14 sm:w-[clamp(158px,21vw,280px)] sm:-translate-x-0 sm:-translate-y-1/2 sm:-rotate-90 sm:text-foreground md:left-20"
         fill="none"
         viewBox="0 0 620 190"
       >

@@ -29,7 +29,7 @@ export function ProjectsSection() {
   return (
     <section
       aria-label="Selected work"
-      className="relative -mt-[12svh] overflow-hidden px-6 pt-0 pb-24 text-background sm:px-10 sm:pb-28 md:px-14 lg:pb-32"
+      className="relative overflow-hidden px-6 pt-2 pb-24 text-background sm:px-10 sm:pb-28 md:-mt-[12svh] md:px-14 md:pt-0 lg:pb-32"
       id="work"
     >
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-14">
@@ -42,16 +42,16 @@ export function ProjectsSection() {
         <div className="flex flex-col">
           {projects.map((project) => (
             <article
-              className="group grid gap-5 py-7 sm:py-8 md:grid-cols-[72px_minmax(0,1fr)_minmax(180px,0.45fr)_72px] md:items-center"
+              className="group grid min-w-0 gap-5 py-7 sm:py-8 md:grid-cols-[72px_minmax(0,1fr)_minmax(180px,0.45fr)_72px] md:items-center"
               key={project.index}
             >
               <span className="text-sm leading-none text-background/45 md:text-base">
                 {project.index}
               </span>
-              <h3 className="text-[clamp(30px,5.8vw,82px)] font-normal leading-[0.94] text-background">
+              <h3 className="min-w-0 text-[clamp(30px,5.8vw,82px)] font-normal leading-[0.94] break-words text-background">
                 {project.title}
               </h3>
-              <p className="text-body-standard font-normal text-background/70 md:text-right">
+              <p className="text-body-standard min-w-0 font-normal break-words text-background/70 md:text-right">
                 {project.role}
               </p>
               <span className="text-sm leading-none text-background/45 md:text-right md:text-base">

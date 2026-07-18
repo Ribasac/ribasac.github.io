@@ -94,16 +94,16 @@ export function HeaderMenu() {
     >
       <button
         aria-expanded={isOpen}
-        className={`menu-card group flex h-10 cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-small px-4 transition-[transform,color,background-color] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 sm:h-11 sm:px-5 ${menuColorClass}`}
+        className={`menu-card group flex h-[var(--menu-height)] min-w-[128px] cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-small px-[var(--menu-x-padding)] transition-[transform,color,background-color] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 sm:min-w-0 ${menuColorClass}`}
         onClick={() => setIsOpen((current) => !current)}
         type="button"
       >
-        <span className="text-[11px] font-semibold uppercase leading-none tracking-[0.08em] sm:text-xs">
+        <span className="text-[var(--menu-label)] font-semibold uppercase leading-none tracking-[0.08em]">
           Menu
         </span>
         <span
           aria-hidden="true"
-          className="flex h-4 w-4 flex-col justify-center gap-1"
+          className="flex h-[18px] w-[18px] flex-col justify-center gap-1 sm:h-4 sm:w-4"
         >
           <span
             className={`block h-px w-full bg-current transition-[transform,width] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] ${
@@ -128,7 +128,7 @@ export function HeaderMenu() {
           <div className="flex flex-col py-2">
             {menuItems.map((item) => (
               <a
-                className="cursor-pointer px-4 py-2 text-left text-sm font-normal leading-none transition-colors duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-accent sm:px-5"
+                className="cursor-pointer px-[var(--menu-x-padding)] py-2.5 text-left text-sm font-normal leading-none transition-colors duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-accent sm:py-2"
                 href={`#${item.targetId}`}
                 key={item.targetId}
                 onClick={(event) => {
