@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLenis } from "lenis/react";
 import { useCallback, useEffect, useRef } from "react";
 
@@ -37,7 +36,8 @@ export function SecondSection() {
   return (
     <section
       aria-label="Second section"
-      className="relative z-0 -mt-[var(--hero-step-depth)] min-h-[calc(100svh+var(--hero-step-depth))] overflow-hidden bg-accent-red pt-[var(--hero-step-depth)]"
+      className="relative z-0 min-h-[100svh] overflow-hidden bg-foreground"
+      data-menu-theme="dark"
       ref={sectionRef}
     >
       <div
@@ -45,16 +45,11 @@ export function SecondSection() {
         ref={parallaxRef}
       >
         <div className="section-line-grid absolute inset-0" />
-        <div className="absolute inset-0 flex items-end justify-center px-6 sm:px-10">
-          <Image
-            alt="Portfolio preview"
-            className="h-auto w-[min(76vw,980px)] rounded-small object-contain"
-            height={900}
-            priority={false}
-            src="/portfolio.png"
-            width={1400}
-          />
-        </div>
+      </div>
+      <div className="relative z-10 flex min-h-[100svh] items-center px-6 py-20 text-background sm:px-10 md:px-14">
+        <h2 className="text-heading-standard mx-auto max-w-4xl text-center font-normal text-background">
+          I engineer products that feel simple to use.
+        </h2>
       </div>
     </section>
   );

@@ -1,9 +1,23 @@
 "use client";
 
 import { ReactLenis } from "lenis/react";
-import type { ReactNode } from "react";
+import { useLayoutEffect, type ReactNode } from "react";
+
+function resetScrollPosition() {
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
 
 export function SmoothScroll({ children }: { children: ReactNode }) {
+  useLayoutEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    resetScrollPosition();
+  }, []);
+
   return (
     <ReactLenis
       options={{

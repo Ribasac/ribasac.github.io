@@ -27,10 +27,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} scrollbar-hide h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <header className="fixed top-3 right-0 left-0 z-50 flex items-start justify-end px-3 sm:top-5 sm:px-5 md:top-8 md:px-8">
+      <body className="scrollbar-hide min-h-full flex flex-col">
+        <header className="fixed top-3 right-0 left-0 z-50 flex items-start justify-center px-3 sm:top-5 sm:px-5 md:top-8 md:px-8">
           <HeaderMenu />
         </header>
         <SmoothScroll>{children}</SmoothScroll>
