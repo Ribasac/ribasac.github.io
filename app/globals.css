@@ -8,11 +8,14 @@
   --line: #acacac;
   --accent: #ffe862;
   --accent-warm: #e48f5b;
-  --accent-red: #c94735;
+  --accent-red: #bd1414;
   --radius-small: 4px;
   --text-body: clamp(18px, 1.6vw, 26px);
   --text-heading: clamp(28px, 7vw, 94px);
   --text-display: clamp(40px, 8.5vw, 132px);
+  --hero-step-depth: clamp(72px, 12vw, 170px);
+  --hero-step-mid: clamp(42px, 7vw, 96px);
+  --hero-step-center: clamp(20px, 3.5vw, 52px);
 }
 
 @theme inline {
@@ -48,24 +51,14 @@ body {
   pointer-events: none;
 }
 
-.square-point-grid {
+.section-line-grid {
+  background-image:
+    linear-gradient(to right, rgb(247 241 237 / 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(247 241 237 / 0.2) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at center, black 0%, rgb(0 0 0 / 0.78) 28%, transparent 68%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 0%, rgb(0 0 0 / 0.78) 28%, transparent 68%);
   pointer-events: none;
-}
-
-.square-point-grid::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-position: 0 0;
-  background-repeat: repeat;
-  pointer-events: none;
-}
-
-.square-point-grid::before {
-  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='4' height='4' fill='%23242424'/%3E%3C/svg%3E");
-  background-size: 28px 28px;
-  mask-image: radial-gradient(ellipse at center, black 0%, black 32%, rgb(0 0 0 / 0.68) 52%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 0%, black 32%, rgb(0 0 0 / 0.68) 52%, transparent 80%);
 }
 
 .menu-card {
