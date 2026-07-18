@@ -1,11 +1,25 @@
 "use client";
 
+import { useLenis } from "lenis/react";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 
-const menuItems = ["Work", "About", "Contact"];
+const menuItems = [
+  { label: "Work", targetId: "work" },
+  { label: "About", targetId: "about" },
+  { label: "Contact", targetId: "contact" },
+];
 type MenuTheme = "light" | "dark";
 
+function getNavigationOffset(targetId: string) {
+  if (targetId !== "work") {
+    return 0;
+  }
+
+  return -Math.min(120, Math.max(72, window.innerHeight * 0.1));
+}
+
 export function HeaderMenu() {
+  const lenis = useLenis();
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState<MenuTheme>("light");
   const navRef = useRef<HTMLElement>(null);
@@ -48,6 +62,28 @@ export function HeaderMenu() {
   } as CSSProperties;
   const menuColorClass =
     theme === "dark" ? "text-foreground" : "text-background";
+  const handleNavigate = (targetId: string) => {
+    const target = document.getElementById(targetId);
+
+    setIsOpen(false);
+
+    if (!target) {
+      return;
+    }
+
+    window.history.pushState(null, "", `#${targetId}`);
+    const offset = getNavigationOffset(targetId);
+
+    if (lenis) {
+      lenis.scrollTo(target, { offset });
+      return;
+    }
+
+    window.scrollTo({
+      behavior: "smooth",
+      top: target.getBoundingClientRect().top + window.scrollY + offset,
+    });
+  };
 
   return (
     <nav
@@ -91,13 +127,17 @@ export function HeaderMenu() {
         <div className="min-h-0">
           <div className="flex flex-col py-2">
             {menuItems.map((item) => (
-              <button
+              <a
                 className="cursor-pointer px-4 py-2 text-left text-sm font-normal leading-none transition-colors duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-accent sm:px-5"
-                key={item}
-                type="button"
+                href={`#${item.targetId}`}
+                key={item.targetId}
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleNavigate(item.targetId);
+                }}
               >
-                {item}
-              </button>
+                {item.label}
+              </a>
             ))}
           </div>
         </div>

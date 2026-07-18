@@ -96,8 +96,12 @@ body {
   will-change: opacity, transform;
 }
 
+.hero-name-enter {
+  animation-delay: 3.32s;
+}
+
 .hero-description-enter {
-  animation-delay: 260ms;
+  animation-delay: 3.48s;
 }
 
 .hero-signature-stroke {

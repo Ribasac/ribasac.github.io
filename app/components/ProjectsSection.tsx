@@ -28,26 +28,21 @@ const projects = [
 export function ProjectsSection() {
   return (
     <section
-      aria-labelledby="projects-title"
+      aria-label="Selected work"
       className="relative -mt-[12svh] overflow-hidden px-6 pt-0 pb-24 text-background sm:px-10 sm:pb-28 md:px-14 lg:pb-32"
+      id="work"
     >
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-14">
         <div className="grid gap-5 md:grid-cols-[1fr_2fr] md:items-end">
           <p className="text-[11px] font-semibold uppercase leading-none tracking-[0.08em] text-background/60 sm:text-xs">
             Selected Work
           </p>
-          <h2
-            className="text-heading-standard max-w-4xl font-normal text-background"
-            id="projects-title"
-          >
-            Projects shaped for real product use.
-          </h2>
         </div>
 
-        <div className="border-t border-background/18">
+        <div className="flex flex-col">
           {projects.map((project) => (
             <article
-              className="group grid gap-5 border-b border-background/18 py-7 transition-colors duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-background/42 sm:py-8 md:grid-cols-[72px_minmax(0,1fr)_minmax(180px,0.45fr)_72px] md:items-center"
+              className="group grid gap-5 py-7 sm:py-8 md:grid-cols-[72px_minmax(0,1fr)_minmax(180px,0.45fr)_72px] md:items-center"
               key={project.index}
             >
               <span className="text-sm leading-none text-background/45 md:text-base">
