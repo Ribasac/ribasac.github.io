@@ -1,16 +1,5 @@
 import { HeroScrollLine } from "./HeroScrollLine";
 
-const skills = [
-  "TypeScript",
-  "React / Next.js",
-  "React Native",
-  "Node.js",
-  "Python",
-  "AI / ML",
-  "PostgreSQL",
-  "Cloudflare",
-];
-
 export function Hero() {
   return (
     <section
@@ -29,19 +18,6 @@ export function Hero() {
           <p className="hero-description-enter text-body-standard text-center font-normal text-foreground">
             Product Engineer based in Kochi
           </p>
-          <ul
-            aria-label="Technical skills"
-            className="hero-description-enter mt-3 flex max-w-3xl flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[11px] font-medium uppercase tracking-[0.09em] text-foreground/60 sm:mt-4 sm:gap-x-3 sm:gap-y-3 sm:text-xs"
-          >
-            {skills.map((skill, index) => (
-              <li key={skill} className="flex items-center gap-2 sm:gap-3">
-                {index > 0 && (
-                  <span aria-hidden="true" className="text-foreground/30">/</span>
-                )}
-                <span>{skill}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
       <svg
